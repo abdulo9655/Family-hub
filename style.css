@@ -145,3 +145,180 @@ button:hover{
     font-size:13px;
     opacity:.75;
 }
+/* ===========================
+   Family Hub Premium Theme
+=========================== */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.12),transparent 35%),
+    radial-gradient(circle at 80% 70%,rgba(96,165,250,.18),transparent 35%);
+    pointer-events:none;
+}
+
+/* กล่อง Dashboard */
+
+.dashboard{
+
+    width:92%;
+    max-width:1200px;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+    0 25px 70px rgba(0,0,0,.35);
+
+    animation:fadeUp .8s;
+}
+
+/* Grid */
+
+.grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+margin-top:35px;
+
+}
+
+/* การ์ด */
+
+.menu{
+
+padding:25px;
+
+border-radius:25px;
+
+background:
+rgba(255,255,255,.08);
+
+border:
+1px solid rgba(255,255,255,.15);
+
+transition:.35s;
+
+cursor:pointer;
+
+transform-style:preserve-3d;
+
+}
+
+.menu:hover{
+
+transform:
+
+translateY(-10px)
+rotateX(5deg)
+rotateY(-5deg)
+scale(1.03);
+
+box-shadow:
+
+0 25px 45px
+rgba(37,99,235,.35);
+
+}
+
+.menu h2{
+
+color:white;
+
+margin-bottom:12px;
+
+}
+
+.menu p{
+
+line-height:1.7;
+
+}
+
+/* เอฟเฟกต์ปุ่ม */
+
+button{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+button::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-100%;
+
+width:100%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.6),
+
+transparent
+
+);
+
+transition:.6s;
+
+}
+
+button:hover::before{
+
+left:100%;
+
+}
+
+/* Animation */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:
+
+translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+
+translateY(0);
+
+}
+
+}
