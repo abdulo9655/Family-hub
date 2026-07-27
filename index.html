@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>TEL Hub Cashless</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Loading -->
+
+<div id="loading">
+
+<div class="loader"></div>
+
+<h1>TEL Hub</h1>
+
+<p>Loading System...</p>
+
+</div>
+
+<!-- Login -->
+
+<div id="login" class="page">
+
+<div class="card">
+
+<h1>TEL Hub</h1>
+
+<p>School Cashless System</p>
+
+<input
+id="username"
+placeholder="Username">
+
+<input
+id="password"
+type="password"
+placeholder="Password">
+
+<button onclick="login()">
+
+LOGIN
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Dashboard -->
+
+<div id="dashboard" class="page hide">
+
+<header>
+
+<h2>TEL Hub</h2>
+
+<span id="today"></span>
+
+</header>
+
+<div class="grid">
+
+<div class="box">
+
+<h3>ยอดเงินทั้งหมด</h3>
+
+<h1 id="money">0</h1>
+
+</div>
+
+<div class="box">
+
+<h3>เติมเงินวันนี้</h3>
+
+<h1 id="topup">0</h1>
+
+</div>
+
+<div class="box">
+
+<h3>จ่ายวันนี้</h3>
+
+<h1 id="pay">0</h1>
+
+</div>
+
+</div>
+
+<div class="menu">
+
+<button>
+
+💳 เติมเงิน
+
+</button>
+
+<button>
+
+🛒 จ่ายเงิน
+
+</button>
+
+<button>
+
+📜 ประวัติ
+
+</button>
+
+<button>
+
+👨‍🎓 นักเรียน
+
+</button>
+
+<button>
+
+⚙ ตั้งค่า
+
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
