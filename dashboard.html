@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Family Hub</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="background">
+
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+<div class="circle c3"></div>
+
+</div>
+
+<div class="dashboard">
+
+<h1 id="welcome">
+Welcome
+</h1>
+
+<p>
+Private Family Dashboard
+</p>
+
+<div class="grid">
+
+<div class="menu">
+
+<h2>💬 LINE กลุ่ม</h2>
+
+<p>ติดต่อสมาชิกในครอบครัว</p>
+
+<a
+href="https://line.me/R/ti/g/ZjLNTKdMG5"
+target="_blank">
+
+<button>เปิด LINE</button>
+
+</a>
+
+</div>
+
+<div class="menu">
+
+<h2>📅 ตารางเรียน</h2>
+
+<p>
+
+เสาร์
+
+18:00-19:00 ภาษาอังกฤษ
+
+<br><br>
+
+19:00-20:00 คณิตศาสตร์
+
+<br><br>
+
+อาทิตย์
+
+18:00-19:00 วิทยาศาสตร์
+
+<br><br>
+
+19:00-20:00 ทบทวนบทเรียน
+
+</p>
+
+</div>
+
+<div class="menu">
+
+<h2>🕒 เวลา</h2>
+
+<h1 id="clock">
+00:00:00
+</h1>
+
+</div>
+
+<div class="menu">
+
+<h2>📢 ข่าว</h2>
+
+<p>
+
+ยินดีต้อนรับเข้าสู่
+
+Family Hub
+
+</p>
+
+</div>
+
+</div>
+
+<button onclick="logout()">
+
+ออกจากระบบ
+
+</button>
+
+</div>
+
+<script>
+
+const user =
+localStorage.getItem("familyUser");
+
+if(!user){
+
+location.href="index.html";
+
+}
+
+document.getElementById("welcome")
+.innerHTML =
+"👋 Welcome<br>"+user;
+
+function logout(){
+
+localStorage.clear();
+
+location.href="index.html";
+
+}
+
+function updateClock(){
+
+const now =
+new Date();
+
+document.getElementById("clock")
+.innerHTML =
+now.toLocaleTimeString("th-TH");
+
+}
+
+updateClock();
+
+setInterval(updateClock,1000);
+
+</script>
+
+</body>
+
+</html>
