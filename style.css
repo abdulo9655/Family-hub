@@ -322,3 +322,38 @@ translateY(0);
 }
 
 }
+.stars{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+background-image:
+
+radial-gradient(white 1px,transparent 1px);
+
+background-size:35px 35px;
+
+opacity:.18;
+
+animation:starsMove 35s linear infinite;
+
+}
+
+@keyframes starsMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-300px);
+
+}
+
+}
